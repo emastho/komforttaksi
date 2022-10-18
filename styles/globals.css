@@ -40,7 +40,6 @@ p {
   padding: 2rem;
   width: 40%;
   height: 100%;
-  overflow: hidden;
   font-size: clamp(.9rem, 4vw, 1.1rem);
 
 }
@@ -88,6 +87,7 @@ p {
 @media only screen and (max-width: 900px) {
   .container {
     flex-direction: column-reverse;
+    height: auto;
   }
 
   .aside {
