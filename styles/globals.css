@@ -1,9 +1,11 @@
 html,
 body {
+  font-family: "Reem Kufi Fun", sans-serif;
+  background-image: url("/background.jpg");
+  background-size: cover;
+  background-position: bottom;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
@@ -15,12 +17,86 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 0, 0.9);
+  display: flex;
+}
+
+.aside {
+  color: #d4d3d3;
+  background: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+  width: 40%;
+  height: 100%;
+  overflow: hidden;
+  font-size: clamp(.9rem, 4vw, 1.1rem);
+
+}
+
+.description {
+  text-indent: 2rem;
+  margin: 2rem 0;
+}
+
+.highlight {
+  color: #f1f411;
+  font-weight: bold;
+}
+
+.aside ul {
+  line-height: 1.5rem;
+  list-style-type: none;
+  padding-left: 1rem;
+}
+
+.aside ul li {
+  list-style-image: url("/check.svg");
+  padding-inline-start: 0.3rem;
+}
+
+.aside h1 {
+  color: #f1f411;
+  font-size: 2rem;
+}
+
+.aside h2 {
+  font-size: 1.3rem;
+}
+
+.article {
+  font-size: 3rem;
+  font-weight: bold;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 900px) {
+  .container {
+    flex-direction: column-reverse;
   }
-  body {
-    color: white;
-    background: black;
+
+  .aside {
+    width: 100%;
+    align-items: center;
+  }
+
+  .article {
+    width: 100%;
+    height: auto;
   }
 }
